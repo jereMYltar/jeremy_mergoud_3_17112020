@@ -1,0 +1,11 @@
+﻿$primary-color: #9356DCFF;
+$primary-color-light: color.adjust($primary-color, $lightness: 35%);
+$secondary-color: #FF79DAFF;
+$tertiary-color: #99E2D0FF;
+$tertiary-color-dark: color.adjust($tertiary-color, $saturation:35%, $lightness: -50%);
+
+$gray-darker: #262626FF;
+$gray-dark: color.adjust($gray-darker, $lightness: 30%);
+$gray-light: color.adjust($gray-darker, $lightness: 60%);
+$gray-lighter: color.adjust($gray-darker, $lightness: 75%);
+$gray-xtralight: color.adjust($gray-darker, $lightness: 80%);

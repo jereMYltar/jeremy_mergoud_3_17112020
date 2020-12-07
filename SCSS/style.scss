@@ -1,0 +1,10 @@
+﻿@use "sass:color";
+@import "./2_utils/variables";
+
+
+body {
+    color:$primary-color;
+    &:hover {
+        color:$tertiary-color;
+    }
+}
