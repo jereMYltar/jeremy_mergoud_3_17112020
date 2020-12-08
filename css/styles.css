@@ -1,11 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
 @font-face {
-  font-family: "RalewayRegular";
-  src: url("../fonts/Raleway/static/Raleway-Regular.ttf") format("truetype");
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Light.ttf") format("truetype");
 }
 @font-face {
-  font-family: "RalewayBold";
-  src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-Regular.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -27,6 +26,8 @@
   width: 1.25rem;
 }
 
+/*Couleurs*/
+/*FontAwesome*/
 .head {
   text-align: center;
   box-shadow: 0 0.33rem 0.33rem #bfbfbf;
@@ -44,6 +45,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.localisation .logo {
+  color: #737373;
 }
 .localisation .geozone {
   font-size: 0.75rem;

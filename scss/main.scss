@@ -22,6 +22,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    .logo {
+        color: $gray-dark;
+    }
+
     .geozone {
         font-size: 0.75rem;
         font-weight: 700;

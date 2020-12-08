@@ -1,4 +1,5 @@
-﻿$primary-color: #9356DCFF;
+﻿/*Couleurs*/
+$primary-color: #9356DCFF;
 $primary-color-light: color.adjust($primary-color, $lightness: 35%);
 $secondary-color: #FF79DAFF;
 $tertiary-color: #99E2D0FF;
@@ -9,3 +10,6 @@ $gray-dark: color.adjust($gray-darker, $lightness: 30%);
 $gray-light: color.adjust($gray-darker, $lightness: 60%);
 $gray-lighter: color.adjust($gray-darker, $lightness: 75%);
 $gray-xtralight: color.adjust($gray-darker, $lightness: 80%);
+
+/*FontAwesome*/
+$fa-font-path: "../scss/7_vendors/webfonts";
