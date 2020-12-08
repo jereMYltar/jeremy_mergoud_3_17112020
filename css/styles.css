@@ -1,8 +1,43 @@
-body {
-  color: #9356DCFF;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Shrikhand&display=swap");
+@font-face {
+  font-family: "RalewayRegular";
+  src: url("../fonts/Raleway/static/Raleway-Regular.ttf") format("truetype");
 }
-body:hover {
-  color: #99E2D0FF;
+@font-face {
+  font-family: "RalewayBold";
+  src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Shrikhand", cursive;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.layout {
+  width: 600px;
+  margin: auto;
+}
+
+.icon {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.head {
+  text-align: center;
+}
+.head .logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.4rem;
+  margin: 23px 0 18px 0;
+}
+
+footer a {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */

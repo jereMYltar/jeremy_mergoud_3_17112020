@@ -1,2 +1,5 @@
 #ignore les documents source
 Brief/
+
+#ignore les éléments générés par VS
+.vs/
