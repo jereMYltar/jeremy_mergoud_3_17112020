@@ -10,116 +10,115 @@
 
 </head>
 <body>
-    <header class="layout head">
-       <h1 class="shrikhand f__size--24 logo">ohmyfood</h1>
+    <header class="title layout">
+       <h1 class="title__logo">ohmyfood</h1>
     </header>
 
     <main class="layout">
-        <section class="localisation bg__color--lighter pad">
-            <i class="fas fa-map-marker-alt icon"></i>
-            <div class="roboto--medium f__size--12 geozone">Paris, Belleville</div>
+        <section class="localisation">
+            <i class="fas fa-map-marker-alt localisation__icon"></i>
+            <div class="localisation__geozone">Paris, Belleville</div>
         </section>
 
-        <section class="description bg__color--xtralight pad">
-            <h2 class="roboto--black f__size--18">Réservez le menu qui vous convient</h2>
-            <h3 class="roboto--light f__size--14">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
-            <button>
-                <div class="roboto--black f__size--12 bg__color--gradient_diag_primtosecond color--white">Explorer nos restaurants</div>
-            </button>
-        </section>
-
-        <section class="working pad">
-            <h3 class="roboto--black f__size--18">Fonctionnement</h3>
-            <button>
-                <div>1</div>
-                <i class="fas fa-mobile-alt icon"></i>
-                <div class="roboto--black f__size--12">Choisissez un restaurant</div>
-            </button>
-            <button>
-                <div>2</div>
-                <i class="fas fa-list-ul icon"></i>
-                <div class="roboto--black f__size--12">Composez votre menu</div>
-            </button>
-            <button>
-                <div>3</div>
-                <i class="fas fa-store icon"></i>
-                <div class="roboto--black f__size--12">Dégustez au restaurant</div>
+        <section class="description">
+            <h2 class="description__title">Réservez le menu qui vous convient</h2>
+            <h3 class="description__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins.</h3>
+            <button class="description__button">
+                <div class="description__button__text">Explorer nos restaurants</div>
             </button>
         </section>
 
-        <section class="restaurants bg__color--xtralight pad">
-            <h3 class="roboto--black f__size--18">Restaurants</h3>
-            <div>
-                <div>
-                    <img />
-                    <button>
-                        <div class="roboto--black f__size--10 color--green">Nouveau</div>
-                    </button>
-                </div>
-                <div>
-                    <div class="roboto--black f__size--14">La palette du goût</div>
-                    <div class="roboto--medium f__size--12">Ménilmontant</div>
-                    <button></button>
-                </div>
-            </div>
+        <section class="working">
+            <h3 class="working__title">Fonctionnement</h3>
+            <button class="working__button">
+                <div class="working__button__number">1</div>
+                <i class="fas fa-mobile-alt working__button__icon"></i>
+                <div class="working__button__text">Choisissez un restaurant</div>
+            </button>
+            <button class="working__button">
+                <div class="working__button__number">2</div>
+                <i class="fas fa-list-ul working__button__icon"></i>
+                <div class="working__button__text">Composez votre menu</div>
+            </button>
+            <button class="working__button">
+                <div class="working__button__number">3</div>
+                <i class="fas fa-store working__button__icon"></i>
+                <div class="working__button__text">Dégustez au restaurant</div>
+            </button>
+        </section>
 
-            <div>
-                <div>
-                    <img />
-                    <button>
-                        <div class="roboto--black f__size--10 color--green">Nouveau</div>
-                    </button>
-                </div>
-                <div>
-                    <div class="roboto--black f__size--14">La note enchantée</div>
-                    <div class="roboto--medium f__size--12">Charonne</div>
-                    <button></button>
-                </div>
-            </div>
+        <section class="restaurants">
+            <h3 class="restaurants__title">Restaurants</h3>
+            <div class="restaurants__layout">
+                <a href="#" class="tile">
+                    <div class="tile__photo">
+                        <div class="tile__photo__new">Nouveau</div>
+                    </div>
+                    <div class="tile__description">
+                        <div class="tile__description__name">La palette du goût</div>
+                        <div class="tile__description__place">Ménilmontant</div>
+                        <i class="far fa-heart tile__description__love"></i>
+                    </div>
+                </a>
 
-            <div>
-                <div>
-                    <img />
-                </div>
-                <div>
-                    <div class="roboto--black f__size--14">À la française</div>
-                    <div class="roboto--medium f__size--12">Cité Rouge</div>
-                    <button></button>
-                </div>
-            </div>
+                <a href="#" class="tile">
+                    <div class="tile__photo">
+                        <div class="tile__photo__new">Nouveau</div>
+                    </div>
+                    <div class="tile__description">
+                        <div class="tile__description__name">La note enchantée</div>
+                        <div class="tile__description__place">Charonne</div>
+                        <i class="far fa-heart tile__description__love"></i>
+                    </div>
+                </a>
 
-            <div>
-                <div>
-                    <img />
-                </div>
-                <div>
-                    <div class="roboto--black f__size--14">Le délice des sens</div>
-                    <div class="roboto--medium f__size--12">Folie-Méricourt</div>
-                    <button></button>
-                </div>
-            </div>
+                <a href="#" class="tile">
+                    <div class="tile__photo">
+                    </div>
+                    <div class="tile__description">
+                        <div class="tile__description__name">À la française</div>
+                        <div class="tile__description__place">Cité Rouge</div>
+                        <i class="far fa-heart tile__description__love"></i>
+                    </div>
+                </a>
 
+                <a href="#" class="tile">
+                    <div class="tile__photo">
+                    </div>
+                    <div class="tile__description">
+                        <div class="tile__description__name">Le délice des sens</div>
+                        <div class="tile__description__place">Folie-Ménicourt</div>
+                        <i class="far fa-heart tile__description__love"></i>
+                    </div>
+                </a>
+            </div>
         </section>
     </main>
 
-    <footer class="layout bg__color--darker pad">
-        <a>
-            <h2 class="shrikhand f__size--14 color--white">ohmyfood</h2>
-        </a>
-        <a>
-            <i class="fas fa-utensils icon color--white"></i>
-            <div class="roboto--black f__size--12 color--white">Proposer un restaurant</div>
-        </a>
-        <a>
-            <i class="fas fa-hands-helping icon color--white"></i>
-            <div class="roboto--black f__size--12 color--white">Devenir partenaire</div>
-        </a>
-        <a>
-            <div class="roboto--black f__size--12 color--white">Mentions légales</div>
-        </a>
-        <a>
-            <div class="roboto--black f__size--12 color--white">Contact</div>
-        </a>
+    <footer class="bottom_page">
+        <div class="foot">
+            <h2 class="foot__title">ohmyfood</h2>
+            <div class="foot__bloc">
+                <div class="foot__subbloc">
+                    <a href="#" class="foot__subbloc__link">
+                        <i class="fas fa-utensils foot__subbloc__icon"></i>
+                        <div class="foot__subbloc__text">Proposer un restaurant</div>
+                    </a>
+                    <a href="#" class="foot__subbloc__link">
+                        <i class="fas fa-hands-helping foot__subbloc__icon"></i>
+                        <div class="foot__subbloc__text">Devenir partenaire</div>
+                    </a>
+                </div>
+                <div class="foot__subbloc">
+                    <a href="#" class="foot__subbloc__link">
+                        <div class="foot__subbloc__text--light">Mentions légales</div>
+                    </a>
+                    <a href="#" class="foot__subbloc__link">
+                        <div class="foot__subbloc__text--light">Contact</div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>

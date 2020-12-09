@@ -16,6 +16,7 @@
 }
 * {
   margin: 0;
+  margin-block: 0;
   padding: 0;
   font-weight: normal;
   font-family: "Roboto_Black", sans-serif;
@@ -61,7 +62,7 @@
   font-size: 0.85rem;
 }
 .f__size--18 {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
 }
 .f__size--24 {
   font-size: 1.5rem;
@@ -92,40 +93,251 @@
 .color--white {
   color: white;
 }
-
-.pad {
-  padding: 0 1.25rem 0 1.25rem;
+.color--gray_darker {
+  color: #262626FF;
 }
 
 body {
   font-size: 16px;
+  background-color: aqua;
 }
 
-.head {
+.title {
   text-align: center;
+  background-color: white;
 }
-.head .logo {
-  padding: 1.4rem 0 0.75rem 0;
+.title__logo {
+  padding: 1.5rem 0 0.75rem 0;
+  font-family: "Shrikhand", cursive;
+  font-weight: bold;
+  font-size: 1.89rem;
 }
 
 .localisation {
-  height: 3rem;
+  height: 3.15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
   box-shadow: inset 0 0.25rem 0.25rem #bfbfbf;
+}
+.localisation__icon {
+  font-size: 1rem;
+  margin-right: 1.15rem;
+  color: #262626FF;
+}
+.localisation__geozone {
+  font-family: "Roboto_Medium", sans-serif;
+  font-size: 0.91rem;
+  color: #262626FF;
+}
+
+.description {
+  padding: 2.69rem 0 3.56rem;
+  text-align: center;
+  background-color: #f2f2f2;
+}
+.description__title {
+  margin: 0 4.06rem 1.25rem;
+  font-size: 1.37rem;
+}
+.description__subtitle {
+  margin: 0 2rem 2.19rem;
+  font-family: "Roboto_Light", sans-serif;
+  font-size: 1.06rem;
+}
+.description__button {
+  padding: 1rem 1.56rem;
+  border: none;
+  border-radius: 1.56rem;
+  background: linear-gradient(to bottom right, #FF79DAFF, #9356DCFF);
+}
+.description__button__text {
+  font-family: "Roboto_Medium", sans-serif;
+  font-size: 0.91rem;
+  color: white;
+}
+.description__button:hover {
+  background: linear-gradient(to bottom right, #9356DCFF, #FF79DAFF);
+}
+
+.working {
+  padding: 3.37rem 1.25rem 2.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: white;
+}
+.working__title {
+  margin-bottom: 2.12rem;
+  font-size: 1.37rem;
+}
+.working__button {
+  height: 4.56rem;
+  width: 100%;
+  margin: 0 0 1.5rem 0.75rem;
+  border: none;
+  border-radius: 1rem;
+  background-color: #f2f2f2;
+  position: relative;
+  box-shadow: 0 0.3rem 0.3rem #bfbfbf;
+  display: flex;
+  align-items: center;
+}
+.working__button__number {
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.75rem;
+  position: absolute;
+  left: -0.75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  color: white;
+  background-color: #9356DCFF;
+}
+.working__button__icon {
+  font-size: 1.25rem;
+  position: absolute;
+  left: 2.12rem;
+  color: #737373;
+}
+.working__button__text {
+  margin-left: 4.62rem;
+  font-size: 0.91rem;
+}
+.working__button:hover {
+  background-color: #f2eafb;
+}
+.working__button:hover > .working__button__icon {
+  color: #9356DCFF;
+}
+
+.restaurants {
+  padding: 3.37rem 1.25rem 2.75rem;
+  background-color: #f2f2f2;
+}
+.restaurants__title {
+  margin-bottom: 2.12rem;
+  font-size: 1.37rem;
+}
+.restaurants__layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.tile {
+  margin-bottom: 1.12rem;
+  min-width: 45%;
+  border-radius: 0.75rem;
+  background-color: white;
+}
+@media screen and (max-width: 700px) {
+  .tile {
+    width: 100%;
+  }
+}
+.tile:nth-of-type(1) > .tile__photo {
+  background-image: url("../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.tile:nth-of-type(2) > .tile__photo {
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.tile:nth-of-type(3) > .tile__photo {
+  background-image: url("../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.tile:nth-of-type(4) > .tile__photo {
+  background-image: url("../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.tile__photo {
+  height: 10.87rem;
+  position: relative;
+  border-radius: 0.75rem 0.75rem 0 0;
+  background: center/cover;
+}
+.tile__photo__new {
+  height: 1.8rem;
+  width: 5rem;
+  font-size: 0.76rem;
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  border-radius: 0.12rem;
+  background-color: #99E2D0FF;
+  color: #06765b;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.localisation .icon {
-  height: 1rem;
-  color: #262626FF;
-  margin-right: 1.15rem;
+.tile__description {
+  padding: 1.25rem 0.87rem 1.09rem;
+  position: relative;
 }
-.localisation .geozone {
-  color: #262626FF;
+.tile__description__name {
+  margin-bottom: 0.56rem;
+  font-size: 1.06rem;
+}
+.tile__description__place {
+  font-family: "Roboto_Light", sans-serif;
+  font-size: 0.91rem;
+}
+.tile__description__love {
+  font-size: 1.5rem;
+  position: absolute;
+  top: calc(50% - 0.75rem);
+  right: 1.5rem;
+}
+.tile:hover {
+  background-color: #f2eafb;
 }
 
-footer a {
+.bottom_page {
+  max-width: 900px;
+  margin: auto;
+  background-color: #262626FF;
+}
+
+.foot {
+  max-width: calc(900px - 2.50rem);
+  padding: 1.69rem 1.25rem 2.21rem;
+}
+.foot__title {
+  margin-bottom: 1.58rem;
+  font-weight: bold;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.1rem;
+  color: white;
+}
+.foot__subbloc__link {
+  position: relative;
+  margin-bottom: 0.7rem;
   display: flex;
+}
+.foot__subbloc__link:hover > .foot__subbloc__icon {
+  color: #99E2D0FF;
+}
+.foot__subbloc__link:hover > .foot__subbloc__text {
+  color: #99E2D0FF;
+}
+.foot__subbloc__link:hover > .foot__subbloc__text--light {
+  color: #99E2D0FF;
+}
+.foot__subbloc__icon {
+  position: absolute;
+  font-size: 0.88rem;
+  color: white;
+}
+.foot__subbloc__text {
+  margin-left: 1.5rem;
+  font-family: "Roboto_Medium", sans-serif;
+  font-size: 0.91rem;
+  color: white;
+}
+.foot__subbloc__text--light {
+  font-family: "Roboto_Light", sans-serif;
+  font-size: 0.91rem;
+  color: white;
 }
 
 /*# sourceMappingURL=styles.css.map */

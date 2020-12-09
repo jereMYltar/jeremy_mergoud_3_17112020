@@ -7,36 +7,288 @@
 
 body{
     font-size: 16px;
+    background-color: aqua;
 }
 
-.head {
+.title {
     text-align: center;
-    .logo {
-        padding: 1.4rem 0 0.75rem 0;
+    background-color: white;
+
+    &__logo {
+        padding: 1.50rem 0 0.75rem 0;
+        font-family: 'Shrikhand', cursive;
+        font-weight: bold;
+        font-size: 1.89rem;
     }
 }
 
 .localisation {
-    height: 3rem;
-    box-shadow: inset 0 0.25rem 0.25rem $gray-light;
+    height: 3.15rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: $gray_lighter;
+    box-shadow: inset 0 0.25rem 0.25rem $gray-light;
 
-    .icon {
-        height: 1rem;
-        color: $gray-darker;
+    &__icon {
+        font-size: 1.00rem;
         margin-right: 1.15rem;
+        color: $gray-darker;
     }
 
-    .geozone {
+    &__geozone {
+        font-family: 'Roboto_Medium', sans-serif;
+        font-size: 0.91rem;
         color: $gray-darker;
     }
 }
 
+.description {
+    padding: 2.69rem 0 3.56rem;
+    text-align: center;
+    background-color: $gray_xtralight;
 
-footer{
-    a {
+    &__title {
+        margin: 0 4.06rem 1.25rem;
+        font-size: 1.37rem;
+    }
+
+    &__subtitle {
+        margin: 0 2.00rem 2.19rem;
+        font-family: 'Roboto_Light', sans-serif;
+        font-size: 1.06rem;
+    }
+
+    &__button {
+        padding: 1.00rem 1.56rem;
+        border: none;
+        border-radius: 1.56rem;
+        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+
+        &__text {
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 0.91rem;
+            color: white;
+        }
+
+        &:hover {
+            background: linear-gradient(to bottom right, $primary-color, $secondary-color);
+        }
+    }
+}
+
+.working {
+    padding: 3.37rem 1.25rem 2.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+
+    &__title {
+        margin-bottom: 2.12rem;
+        font-size: 1.37rem;
+    }
+
+    &__button {
+        height: 4.56rem;
+        width: 100%;
+        margin: 0 0 1.5rem 0.75rem;
+        border: none;
+        border-radius: 1rem;
+        background-color: $gray_xtralight;
+        position: relative;
+        box-shadow: 0 0.3rem 0.3rem $gray-light;
         display: flex;
+        align-items: center;
+
+        &__number {
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 0.75rem;
+            position: absolute;
+            left: -0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.75rem;
+            color: white;
+            background-color: $primary-color;
+        }
+
+        &__icon {
+            font-size: 1.25rem;
+            position: absolute;
+            left: 2.12rem;
+            color: $gray-dark;
+        }
+
+        &__text {
+            margin-left: 4.62rem;
+            font-size: 0.91rem;
+        }
+
+        &:hover {
+            background-color: $primary-color-light;
+
+            & > .working__button__icon {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.restaurants {
+    padding: 3.37rem 1.25rem 2.75rem;
+    background-color: $gray-xtralight;
+
+    &__title {
+        margin-bottom: 2.12rem;
+        font-size: 1.37rem;
+    }
+
+    &__layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+.tile {
+    margin-bottom: 1.12rem;
+    min-width: 45%;
+    border-radius: 0.75rem;
+    background-color: white;
+
+    @media screen and (max-width: 700px) {
+        with: 100%;
+    }
+
+
+    &:nth-of-type(1) > .tile__photo {
+        background-image: url('../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    }
+
+    &:nth-of-type(2) > .tile__photo {
+        background-image: url('../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg');
+    }
+
+    &:nth-of-type(3) > .tile__photo {
+        background-image: url('../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+    }
+
+    &:nth-of-type(4) > .tile__photo {
+        background-image: url('../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+    }
+
+    &__photo {
+        height: 10.87rem;
+        position: relative;
+        border-radius: 0.75rem 0.75rem 0 0;
+        background: center / cover;
+
+        &__new {
+            height: 1.80rem;
+            width: 5.00rem;
+            font-size: 0.76rem;
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            border-radius: 0.12rem;
+            background-color: $tertiary-color;
+            color: $tertiary-color-dark;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__description {
+        padding: 1.25rem 0.87rem 1.09rem;
+        position: relative;
+
+        &__name {
+            margin-bottom: 0.56rem;
+            font-size: 1.06rem;
+        }
+
+        &__place {
+            font-family: 'Roboto_Light', sans-serif;
+            font-size: 0.91rem;
+        }
+
+        &__love {
+            font-size: 1.50rem;
+            position: absolute;
+            top: calc(50% - 0.75rem);
+            right: 1.50rem;
+        }
+    }
+
+    &:hover {
+        background-color: $primary-color-light;
+    }
+}
+
+
+.bottom_page {
+    max-width: 900px;
+    margin: auto;
+    background-color: $gray-darker;
+}
+
+.foot {
+    max-width: calc(900px - 2.50rem);
+    padding: 1.69rem 1.25rem 2.21rem;
+
+    &__title {
+        margin-bottom: 1.58rem;
+        font-weight: bold;
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.10rem;
+        color: white;
+    }
+
+    &__bloc {
+    }
+
+    &__subbloc {
+
+        &__link {
+            position: relative;
+            margin-bottom: 0.70rem;
+            display: flex;
+
+            &:hover > .foot__subbloc__ {
+                &icon {
+                    color: $tertiary-color;
+                }
+
+                &text {
+                    color: $tertiary-color;
+                }
+
+                &text--light {
+                    color: $tertiary-color;
+                }
+            }
+        }
+
+        &__icon {
+            position: absolute;
+            font-size: 0.88rem;
+            color: white;
+        }
+
+        &__text {
+            margin-left: 1.5rem;
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 0.91rem;
+            color: white;
+
+            &--light {
+                font-family: 'Roboto_Light', sans-serif;
+                font-size: 0.91rem;
+                color: white;
+            }
+        }
     }
 }
