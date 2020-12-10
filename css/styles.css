@@ -235,7 +235,7 @@ body {
 }
 @media screen and (max-width: 700px) {
   .tile {
-    with: 100%;
+    width: 100%;
   }
 }
 .tile:nth-of-type(1) > .tile__photo {
