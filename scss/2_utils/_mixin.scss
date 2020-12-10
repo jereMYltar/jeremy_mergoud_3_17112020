@@ -1,25 +1,5 @@
-﻿@mixin bg__color {
-    &--xtralight {
-        background-color: $gray_xtralight;
-    }
-
-    &--lighter {
-        background-color: $gray_lighter;
-    }
-
-    &--light {
-        background-color: $gray_light;
-    }
-
-    &--dark {
-        background-color: $gray_dark;
-    }
-
-    &--darker {
-        background-color: $gray_darker;
-    }
-
-    &--gradient_diag_primtosecond {
-        background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+﻿@mixin mediaquery ($var) {
+    @media screen and (max-width: map-get($breakpoints, #{$var}-screen)) {
+        @content;
     }
 }

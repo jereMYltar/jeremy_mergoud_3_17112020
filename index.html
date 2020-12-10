@@ -3,18 +3,27 @@
 <html lang="fr" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <title>OhMyFood!</title>
+    <title>ohmyfood</title>
     <link href="./scss/7_vendors/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/styles.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="" />
-
+    <link rel="shortcut icon" type="image/x-icon" href="icons/icon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
 </head>
 <body>
-    <header class="title layout">
+    <header class="title layout too_small_yes">
        <h1 class="title__logo">ohmyfood</h1>
     </header>
 
-    <main class="layout">
+    <div class="warning too_small_no">
+        <img src="icons/warning.svg" alt="Attention" class="warning__picture"/>
+        <div class="warning__text">Nous sommes désolés,</div>
+        <img src="images/logo/ohmyfood@2x.svg" alt="Logo ohmyfood" class="warning__picture" />
+        <div class="warning__text">n'est pas disponible sous ce format d'écran.</div>
+        <div class="warning__text">Vous pouvez réessayer sur un écran plus large.</div>
+        <div class="warning__text">À très bientôt.</div>
+    </div>
+
+    <main class="layout too_small_yes">
         <section class="localisation">
             <i class="fas fa-map-marker-alt localisation__icon"></i>
             <div class="localisation__geozone">Paris, Belleville</div>
@@ -95,7 +104,7 @@
         </section>
     </main>
 
-    <footer class="bottom_page">
+    <footer class="bottom_page too_small_yes">
         <div class="foot">
             <h2 class="foot__title">ohmyfood</h2>
             <div class="foot__bloc">

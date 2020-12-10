@@ -13,3 +13,12 @@ $gray-xtralight: color.adjust($gray-darker, $lightness: 80%);
 
 /*FontAwesome*/
 $fa-font-path: "../scss/7_vendors/webfonts";
+
+/*Media queries*/
+$breakpoints: (
+    xxs-screen: 80px,
+    xs-screen: 140px,
+    s-screen: 250px,
+    m-screen: 350px,
+    l-screen: 700px
+);
