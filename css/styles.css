@@ -22,6 +22,7 @@
   font-size: 1rem;
   text-decoration: none;
   color: black;
+  border: none;
 }
 
 /*Couleurs*/
@@ -47,16 +48,16 @@ html {
 }
 
 @media screen and (max-width: 250px) {
-  .too_small_yes {
+  .too_small_no {
     display: none;
   }
 }
 
-.too_small_no {
+.too_small_yes {
   display: none;
 }
 @media screen and (max-width: 250px) {
-  .too_small_no {
+  .too_small_yes {
     display: block;
   }
 }
@@ -69,11 +70,18 @@ body {
 .title {
   text-align: center;
   background-color: white;
+  position: relative;
 }
 .title__logo {
   padding: 1.37rem 0 0.69rem 0;
   font-family: "Shrikhand", cursive;
   font-size: 1.87rem;
+}
+.title__return {
+  position: absolute;
+  left: 1.44rem;
+  top: calc(1.37rem + 1.87rem / 2);
+  font-size: 1rem;
 }
 
 .localisation {
@@ -186,6 +194,36 @@ body {
 }
 .working__button:hover > .working__button__icon {
   color: #9356DCFF;
+}
+
+.canteen {
+  position: relative;
+}
+.canteen__img {
+  height: 18.5rem;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.canteen__tab {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 2.24rem);
+  background-color: #f2f2f2;
+  border-radius: 2.37rem 2.37rem 0 0;
+  padding: 2.44rem 1.12rem 0.56rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.canteen__tab__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+}
+.canteen__tab__icon {
+  font-size: 1.31rem;
+  margin-right: 1.25rem;
+  cursor: pointer;
 }
 
 .restaurants {

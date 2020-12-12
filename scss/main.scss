@@ -23,13 +23,13 @@ html {
     margin: auto;
 }
 
-.too_small_yes {
+.too_small_no {
     @include mediaquery (s) {
         display: none;
     }
 }
 
-.too_small_no {
+.too_small_yes {
     display: none;
     @include mediaquery (s) {
         display: block;
@@ -44,11 +44,19 @@ body {
 .title {
     text-align: center;
     background-color: white;
+    position: relative;
 
     &__logo {
         padding: 1.37rem 0 0.69rem 0;
         font-family: 'Shrikhand', cursive;
         font-size: 1.87rem;
+    }
+
+    &__return {
+        position: absolute;
+        left: 1.44rem;
+        top: calc(1.37rem + 1.87rem / 2);
+        font-size: 1.00rem;
     }
 }
 
@@ -172,6 +180,40 @@ body {
             & > .working__button__icon {
                 color: $primary-color;
             }
+        }
+    }
+}
+
+.canteen {
+    position: relative;
+
+    &__img {
+        height: 18.50rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__tab {
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 2.24rem);
+        background-color: $gray-xtralight;
+        border-radius: 2.37rem 2.37rem 0 0;
+        padding: 2.44rem 1.12rem 0.56rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        &__title {
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.75rem;
+        }
+
+        &__icon {
+            font-size: 1.31rem;
+            margin-right: 1.25rem;
+            cursor: pointer;
         }
     }
 }
