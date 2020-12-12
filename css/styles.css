@@ -30,12 +30,12 @@
 html {
   font-size: 20px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 900px) {
   html {
     font-size: 18px;
   }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 700px) {
   html {
     font-size: 16px;
   }
@@ -71,14 +71,13 @@ body {
   background-color: white;
 }
 .title__logo {
-  padding: 1.5rem 0 0.75rem 0;
+  padding: 1.37rem 0 0.69rem 0;
   font-family: "Shrikhand", cursive;
-  font-weight: bold;
-  font-size: 1.89rem;
+  font-size: 1.87rem;
 }
 
 .localisation {
-  height: 3.15rem;
+  height: 3.12rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,44 +86,44 @@ body {
 }
 .localisation__icon {
   font-size: 1rem;
-  margin-right: 1.15rem;
+  margin-right: 1.12rem;
   color: #262626FF;
 }
 .localisation__geozone {
   font-family: "Roboto_Medium", sans-serif;
-  font-size: 0.91rem;
+  font-size: 1rem;
   color: #262626FF;
 }
 
 .description {
-  padding: 2.69rem 0 3.56rem;
+  padding: 2.62rem 0 3.56rem;
   text-align: center;
   background-color: #f2f2f2;
 }
 .description__title {
-  margin: 0 4.06rem 1.25rem;
-  font-size: 1.37rem;
+  margin: 0 4.06rem 0.87rem;
+  font-size: 1.5rem;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 350px) {
   .description__title {
     margin: 0 2rem 1.25rem;
   }
 }
 .description__subtitle {
-  margin: 0 2rem 2.19rem;
+  margin: 0 2.44rem 1.87rem;
   font-family: "Roboto_Light", sans-serif;
-  font-size: 1.06rem;
+  font-size: 1.12rem;
 }
 .description__button {
-  padding: 1rem 1.56rem;
+  height: 3.12rem;
+  padding: 0 1.37rem;
   border: none;
   border-radius: 1.56rem;
   background: linear-gradient(to bottom right, #FF79DAFF, #9356DCFF);
   cursor: pointer;
 }
 .description__button__text {
-  font-family: "Roboto_Medium", sans-serif;
-  font-size: 0.91rem;
+  font-size: 1rem;
   color: white;
 }
 .description__button:hover {
@@ -132,15 +131,15 @@ body {
 }
 
 .working {
-  padding: 3.37rem 1.25rem 2.75rem;
+  padding: 3.19rem 1.25rem 2.75rem;
   background-color: white;
 }
 .working__title {
-  margin-bottom: 2.12rem;
-  font-size: 1.37rem;
+  margin-bottom: 1.87rem;
+  font-size: 1.5rem;
 }
 .working__button {
-  height: 4.56rem;
+  height: 4.62rem;
   width: calc(70% - 0.75rem);
   margin: 0 auto 1.5rem;
   border: none;
@@ -174,12 +173,13 @@ body {
 .working__button__icon {
   font-size: 1.25rem;
   position: absolute;
-  left: 2.12rem;
+  left: 2.06rem;
   color: #737373;
 }
 .working__button__text {
-  margin-left: 4.62rem;
-  font-size: 0.91rem;
+  margin-left: 4.56rem;
+  font-family: "Roboto_Medium", sans-serif;
+  font-size: 1rem;
 }
 .working__button:hover {
   background-color: #f2eafb;
@@ -189,12 +189,12 @@ body {
 }
 
 .restaurants {
-  padding: 3.37rem 1.25rem 2.75rem;
+  padding: 3.56rem 1.25rem 2.88rem;
   background-color: #f2f2f2;
 }
 .restaurants__title {
-  margin-bottom: 2.12rem;
-  font-size: 1.37rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
 }
 .restaurants__layout {
   display: flex;
@@ -232,9 +232,10 @@ body {
   background: center/cover;
 }
 .tile__photo__new {
-  height: 1.8rem;
-  width: 5rem;
-  font-size: 0.76rem;
+  height: 1.81rem;
+  width: 5.02rem;
+  font-family: "Roboto_Medium", sans-serif;
+  font-size: 0.87rem;
   position: absolute;
   top: 0.75rem;
   right: 0.75rem;
@@ -246,16 +247,16 @@ body {
   align-items: center;
 }
 .tile__description {
-  padding: 1.25rem 0.87rem 1.09rem;
+  padding: 1.12rem 0.87rem 1rem;
   position: relative;
 }
 .tile__description__name {
-  margin-bottom: 0.56rem;
-  font-size: 1.06rem;
+  margin-bottom: 0.31rem;
+  font-size: 1.12rem;
 }
 .tile__description__place {
   font-family: "Roboto_Light", sans-serif;
-  font-size: 0.91rem;
+  font-size: 1.06rem;
 }
 .tile__description__love {
   font-size: 1.5rem;
@@ -282,12 +283,11 @@ body {
 }
 
 .foot {
-  max-width: calc(900px - 2.50rem);
-  padding: 1.69rem 1.25rem 2.21rem;
+  max-width: calc(map-get($breakpoints, xl-screen) - 2.50rem);
+  padding: 1.56rem 1.25rem 2.21rem;
 }
 .foot__title {
   margin-bottom: 1.58rem;
-  font-weight: bold;
   font-family: "Shrikhand", cursive;
   font-size: 1.1rem;
   color: white;
@@ -317,7 +317,7 @@ body {
 }
 .foot__subbloc__link {
   position: relative;
-  margin-bottom: 0.7rem;
+  margin-bottom: 0.56rem;
   display: flex;
   justify-content: center;
 }
@@ -337,7 +337,7 @@ body {
 }
 .foot__subbloc__icon {
   position: relative;
-  font-size: 0.88rem;
+  font-size: 0.81rem;
   color: white;
 }
 @media screen and (max-width: 700px) {
@@ -348,17 +348,17 @@ body {
 .foot__subbloc__text {
   margin-left: 0.5rem;
   font-family: "Roboto_Medium", sans-serif;
-  font-size: 0.91rem;
+  font-size: 1rem;
   color: white;
 }
 @media screen and (max-width: 700px) {
   .foot__subbloc__text {
-    margin-left: 1.5rem;
+    margin-left: 1.44rem;
   }
 }
 .foot__subbloc__text--light {
   font-family: "Roboto_Light", sans-serif;
-  font-size: 0.91rem;
+  font-size: 1rem;
   color: white;
 }
 

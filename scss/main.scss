@@ -9,17 +9,17 @@
 html {
     font-size: 20px;
 
-    @include mediaquery (l) {
+    @include mediaquery (xl) {
         font-size: 18px;
     }
 
-    @include mediaquery (m) {
+    @include mediaquery (l) {
         font-size: 16px;
     }
 }
 
 .layout {
-    max-width: 900px;
+    max-width: map-get($breakpoints, xl-screen);
     margin: auto;
 }
 
@@ -46,15 +46,14 @@ body {
     background-color: white;
 
     &__logo {
-        padding: 1.50rem 0 0.75rem 0;
+        padding: 1.37rem 0 0.69rem 0;
         font-family: 'Shrikhand', cursive;
-        font-weight: bold;
-        font-size: 1.89rem;
+        font-size: 1.87rem;
     }
 }
 
 .localisation {
-    height: 3.15rem;
+    height: 3.12rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,47 +62,47 @@ body {
 
     &__icon {
         font-size: 1.00rem;
-        margin-right: 1.15rem;
+        margin-right: 1.12rem;
         color: $gray-darker;
     }
 
     &__geozone {
         font-family: 'Roboto_Medium', sans-serif;
-        font-size: 0.91rem;
+        font-size: 1.00rem;
         color: $gray-darker;
     }
 }
 
 .description {
-    padding: 2.69rem 0 3.56rem;
+    padding: 2.62rem 0 3.56rem;
     text-align: center;
     background-color: $gray_xtralight;
 
     &__title {
-        margin: 0 4.06rem 1.25rem;
-        font-size: 1.37rem;
+        margin: 0 4.06rem 0.87rem;
+        font-size: 1.50rem;
 
-        @include mediaquery (l) {
+        @include mediaquery (m) {
             margin: 0 2rem 1.25rem;
         }
     }
 
     &__subtitle {
-        margin: 0 2.00rem 2.19rem;
+        margin: 0 2.44rem 1.87rem;
         font-family: 'Roboto_Light', sans-serif;
-        font-size: 1.06rem;
+        font-size: 1.12rem;
     }
 
     &__button {
-        padding: 1.00rem 1.56rem;
+        height: 3.12rem;
+        padding: 0 1.37rem;
         border: none;
         border-radius: 1.56rem;
         background: linear-gradient(to bottom right, $secondary-color, $primary-color);
         cursor: pointer;
 
         &__text {
-            font-family: 'Roboto_Medium', sans-serif;
-            font-size: 0.91rem;
+            font-size: 1.00rem;
             color: white;
         }
 
@@ -114,20 +113,20 @@ body {
 }
 
 .working {
-    padding: 3.37rem 1.25rem 2.75rem;
+    padding: 3.19rem 1.25rem 2.75rem;
     background-color: white;
 
     &__title {
-        margin-bottom: 2.12rem;
-        font-size: 1.37rem;
+        margin-bottom: 1.87rem;
+        font-size: 1.50rem;
     }
 
     &__button {
-        height: 4.56rem;
+        height: 4.62rem;
         width: calc(70% - 0.75rem);
         margin: 0 auto 1.5rem;
         border: none;
-        border-radius: 1rem;
+        border-radius: 1.00rem;
         background-color: $gray_xtralight;
         position: relative;
         box-shadow: 0 0.3rem 0.3rem $gray-light;
@@ -157,13 +156,14 @@ body {
         &__icon {
             font-size: 1.25rem;
             position: absolute;
-            left: 2.12rem;
+            left: 2.06rem;
             color: $gray-dark;
         }
 
         &__text {
-            margin-left: 4.62rem;
-            font-size: 0.91rem;
+            margin-left: 4.56rem;
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 1.00rem;
         }
 
         &:hover {
@@ -177,12 +177,12 @@ body {
 }
 
 .restaurants {
-    padding: 3.37rem 1.25rem 2.75rem;
+    padding: 3.56rem 1.25rem 2.88rem;
     background-color: $gray-xtralight;
 
     &__title {
-        margin-bottom: 2.12rem;
-        font-size: 1.37rem;
+        margin-bottom: 1.50rem;
+        font-size: 1.50rem;
     }
 
     &__layout {
@@ -226,9 +226,10 @@ body {
         background: center / cover;
 
         &__new {
-            height: 1.80rem;
-            width: 5.00rem;
-            font-size: 0.76rem;
+            height: 1.81rem;
+            width: 5.02rem;
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 0.87rem;
             position: absolute;
             top: 0.75rem;
             right: 0.75rem;
@@ -242,17 +243,17 @@ body {
     }
 
     &__description {
-        padding: 1.25rem 0.87rem 1.09rem;
+        padding: 1.12rem 0.87rem 1.00rem;
         position: relative;
 
         &__name {
-            margin-bottom: 0.56rem;
-            font-size: 1.06rem;
+            margin-bottom: 0.31rem;
+            font-size: 1.12rem;
         }
 
         &__place {
             font-family: 'Roboto_Light', sans-serif;
-            font-size: 0.91rem;
+            font-size: 1.06rem;
         }
 
         &__love {
@@ -263,8 +264,8 @@ body {
 
             @include mediaquery (m) {
                 top: unset;
-                right: 1rem;
-                bottom: 1rem;
+                right: 1.00rem;
+                bottom: 1.00rem;
             }
         }
     }
@@ -277,18 +278,17 @@ body {
 
 
 .bottom_page {
-    max-width: 900px;
+    max-width: map-get($breakpoints, xl-screen);
     margin: auto;
     background-color: $gray-darker;
 }
 
 .foot {
-    max-width: calc(900px - 2.50rem);
-    padding: 1.69rem 1.25rem 2.21rem;
+    max-width: calc(map-get($breakpoints, xl-screen) - 2.50rem);
+    padding: 1.56rem 1.25rem 2.21rem;
 
     &__title {
         margin-bottom: 1.58rem;
-        font-weight: bold;
         font-family: 'Shrikhand', cursive;
         font-size: 1.10rem;
         color: white;
@@ -317,7 +317,7 @@ body {
 
         &__link {
             position: relative;
-            margin-bottom: 0.70rem;
+            margin-bottom: 0.56rem;
             display: flex;
             justify-content: center;
 
@@ -343,7 +343,7 @@ body {
 
         &__icon {
             position: relative;
-            font-size: 0.88rem;
+            font-size: 0.81rem;
             color: white;
 
             @include mediaquery (l) {
@@ -354,17 +354,17 @@ body {
         &__text {
             margin-left: 0.5rem;
             font-family: 'Roboto_Medium', sans-serif;
-            font-size: 0.91rem;
+            font-size: 1.00rem;
             color: white;
 
             @include mediaquery (l) {
-                margin-left: 1.5rem;
+                margin-left: 1.44rem;
             }
 
 
             &--light {
                 font-family: 'Roboto_Light', sans-serif;
-                font-size: 0.91rem;
+                font-size: 1.00rem;
                 color: white;
             }
         }
