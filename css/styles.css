@@ -335,8 +335,9 @@ body {
   margin-bottom: 0.87rem;
   border-radius: 0.75rem;
   background-color: white;
+  cursor: pointer;
 }
-.menu__list {
+.menu__radio {
   display: none;
 }
 

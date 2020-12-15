@@ -341,9 +341,10 @@ body {
         margin-bottom: 0.87rem;
         border-radius: 0.75rem;
         background-color: white;
+        cursor: pointer;
     }
 
-    &__list {
+    &__radio {
         display: none;
     }
 }
