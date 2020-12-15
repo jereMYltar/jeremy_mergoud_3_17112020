@@ -318,6 +318,36 @@ body {
     }
 }
 
+.menu {
+    padding: 1.75rem 0.87rem 5.19rem;
+    background-color: $gray-xtralight;
+
+    &__title {
+        font-family: 'Roboto_Light', sans-serif;
+        font-size: 1.00rem;
+        margin: 0 0 0.31rem 0.44rem;
+    }
+
+    &__line {
+        height: 0.19rem;
+        width: 2.50rem;
+        background-color: $tertiary-color;
+        margin: 0 0 0.87rem 0.44rem;
+    }
+
+    &__element {
+        display: block;
+        padding: 0.87rem 0.69rem 0.75rem;
+        margin-bottom: 0.87rem;
+        border-radius: 0.75rem;
+        background-color: white;
+    }
+
+    &__list {
+        display: none;
+    }
+}
+
 
 .bottom_page {
     max-width: map-get($breakpoints, xl-screen);

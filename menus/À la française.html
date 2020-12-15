@@ -40,18 +40,36 @@
             </div>
         </section>
 
-        <section class="restaurants">
-            <div class="restaurants__layout">
-                <a href="#" class="tile">
-                    <div class="tile__description">
-                        <div class="tile__description__name">Tartare de poulpe acidulé</div>
-                        <div class="tile__description__place">Aux zestes d'orange</div>
-                    </div>
-                </a>
+        <section class="menu">
+            <form>
+                <h3 class="menu__title">ENTRÉES</h3>
+                <div class="menu__line"></div>
+                
+                <label for="starters" class="menu__element">
+                    <input type="radio" name="starters" id="starters-1" class="menu__list" />
+                    <span class="tile__description__name" style="display:block">Tartare de poulpe acidulé</span>
+                    <span class="tile__description__place" style="display:block">Aux zestes d'orange</span>
+                </label>
 
-            </div>
+                <div>
+                    <input type="radio" name="starters" id="starters-2" class="menu__list" />
+                    <label for="starters" class="tile__description">
+                        <span class="tile__description__name" style="display:block;">Velouté de légumes d'antan</span>
+                        <span class="tile__description__place" style="display:block;">Carotte, panais, topinambour</span>
+                    </label>
+                </div>
+                <div>
+                    <input type="radio" name="starters" id="starters-3" class="menu__list" />
+                    <label for="starters" class="tile__description">
+                        <div class="tile__description__name">Soupe à l'oignon</div>
+                        <div class="tile__description__place">Revisitée</div>
+                    </label>
+                </div>
+            </form>
         </section>
     </main>
+
+
 
     <footer class="bottom_page too_small_no">
         <div class="foot">
