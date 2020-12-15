@@ -1,10 +1,9 @@
 ﻿@use "sass:color";
 @use "sass:map";
 @import "./1_base/fonts";
-@import "./1_base/cleaning";
+@import "./1_base/reset";
 @import "./2_utils/variables";
 @import "./2_utils/mixin";
-
 
 html {
     font-size: 20px;
@@ -336,16 +335,62 @@ body {
     }
 
     &__element {
-        display: block;
-        padding: 0.87rem 0.69rem 0.75rem;
+        position: relative;
+        display: flex;
+        padding-right: 0rem;
         margin-bottom: 0.87rem;
         border-radius: 0.75rem;
         background-color: white;
         cursor: pointer;
-    }
+        overflow: hidden;
+        transition: padding-right 500ms;
 
-    &__radio {
-        display: none;
+        &__description {
+            width: 100%;
+            padding: 0.87rem 0 0.75rem 0.69rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        &__price {
+            padding: 0 1.44rem;
+            display: flex;
+            align-items: flex-end;
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 0.94rem;
+        }
+
+        &__check {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.69rem;
+            background-color: $tertiary-color;
+            border-radius: 0 0.75rem 0.75rem 0;
+            transform: translateX(100%);
+            transition: all 500ms;
+
+            &__icon {
+                color: white;
+                font-size: 1.25rem;
+                transition: transform 500ms;
+            }
+        }
+
+        &:hover {
+            padding-right: 3.69rem;
+
+            & > .menu__element__check {
+                transform: translateX(0);
+            }
+
+            & .menu__element__check__icon {
+                transform: rotate(360deg);
+            }
+        }
     }
 }
 

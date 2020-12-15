@@ -330,15 +330,55 @@ body {
   margin: 0 0 0.87rem 0.44rem;
 }
 .menu__element {
-  display: block;
-  padding: 0.87rem 0.69rem 0.75rem;
+  position: relative;
+  display: flex;
+  padding-right: 0rem;
   margin-bottom: 0.87rem;
   border-radius: 0.75rem;
   background-color: white;
   cursor: pointer;
+  overflow: hidden;
+  transition: padding-right 500ms;
 }
-.menu__radio {
-  display: none;
+.menu__element__description {
+  width: 100%;
+  padding: 0.87rem 0 0.75rem 0.69rem;
+  display: flex;
+  justify-content: space-between;
+}
+.menu__element__price {
+  padding: 0 1.44rem;
+  display: flex;
+  align-items: flex-end;
+  font-family: "Roboto_Medium", sans-serif;
+  font-size: 0.94rem;
+}
+.menu__element__check {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.69rem;
+  background-color: #99E2D0FF;
+  border-radius: 0 0.75rem 0.75rem 0;
+  transform: translateX(100%);
+  transition: all 500ms;
+}
+.menu__element__check__icon {
+  color: white;
+  font-size: 1.25rem;
+  transition: transform 500ms;
+}
+.menu__element:hover {
+  padding-right: 3.69rem;
+}
+.menu__element:hover > .menu__element__check {
+  transform: translateX(0);
+}
+.menu__element:hover .menu__element__check__icon {
+  transform: rotate(360deg);
 }
 
 .bottom_page {
