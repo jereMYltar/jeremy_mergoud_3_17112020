@@ -364,12 +364,12 @@ body {
   background-color: #99E2D0FF;
   border-radius: 0 0.75rem 0.75rem 0;
   transform: translateX(100%);
-  transition: all 500ms;
+  transition: transform 500ms;
 }
 .menu__element__check__icon {
   color: white;
   font-size: 1.25rem;
-  transition: transform 500ms;
+  transition: none;
 }
 .menu__element:hover {
   padding-right: 3.69rem;
@@ -379,6 +379,7 @@ body {
 }
 .menu__element:hover .menu__element__check__icon {
   transform: rotate(360deg);
+  transition: transform 500ms;
 }
 
 .bottom_page {
