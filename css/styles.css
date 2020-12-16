@@ -25,6 +25,10 @@
   border: none;
 }
 
+*:focus {
+  outline: none;
+}
+
 /*Couleurs*/
 /*FontAwesome*/
 /*Media queries*/
@@ -211,7 +215,7 @@ body {
   width: calc(100% - 2.24rem);
   background-color: #f2f2f2;
   border-radius: 2.37rem 2.37rem 0 0;
-  padding: 2.44rem 1.12rem 0.56rem;
+  padding: 2.44rem 1.12rem 0.69rem;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -237,12 +241,12 @@ body {
 .restaurants__layout {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .tile {
   margin-bottom: 1.12rem;
-  min-width: 45%;
+  min-width: 48.5%;
   border-radius: 0.75rem;
   background-color: white;
 }
@@ -291,10 +295,16 @@ body {
 .tile__description__name {
   margin-bottom: 0.31rem;
   font-size: 1.12rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tile__description__place {
   font-family: "Roboto_Light", sans-serif;
   font-size: 1.06rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .tile__description__love {
   font-size: 1.5rem;
@@ -315,13 +325,14 @@ body {
 }
 
 .menu {
-  padding: 1.75rem 0.87rem 5.19rem;
+  padding: 0 0.87rem 2.25rem;
   background-color: #f2f2f2;
 }
 .menu__title {
   font-family: "Roboto_Light", sans-serif;
   font-size: 1rem;
   margin: 0 0 0.31rem 0.44rem;
+  padding-top: 1.75rem;
 }
 .menu__line {
   height: 0.19rem;
@@ -332,19 +343,23 @@ body {
 .menu__element {
   position: relative;
   display: flex;
-  padding-right: 0rem;
   margin-bottom: 0.87rem;
   border-radius: 0.75rem;
   background-color: white;
   cursor: pointer;
   overflow: hidden;
-  transition: padding-right 500ms;
+  /*        opacity: 0;
+          transform: translateY(10.00rem);*/
 }
 .menu__element__description {
-  width: 100%;
   padding: 0.87rem 0 0.75rem 0.69rem;
   display: flex;
   justify-content: space-between;
+  width: 100%;
+  transition: width 500ms;
+}
+.menu__element__text {
+  max-width: calc(100% - 4.50rem);
 }
 .menu__element__price {
   padding: 0 1.44rem;
@@ -372,7 +387,11 @@ body {
   transition: none;
 }
 .menu__element:hover {
-  padding-right: 3.69rem;
+  /*            padding-right: 3.69rem;
+  */
+}
+.menu__element:hover > .menu__element__description {
+  width: calc(100% - 3.69rem);
 }
 .menu__element:hover > .menu__element__check {
   transform: translateX(0);
