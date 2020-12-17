@@ -224,10 +224,33 @@ body {
   font-family: "Shrikhand", cursive;
   font-size: 1.75rem;
 }
-.canteen__tab__icon {
-  font-size: 1.31rem;
+
+.heart-button {
   margin-right: 1.25rem;
   cursor: pointer;
+  position: relative;
+}
+.heart-button__icon {
+  font-size: 1.31rem;
+}
+.heart-button__icon--bw {
+  opacity: 1;
+  transition: opacity ease-in-out 300ms;
+}
+.heart-button__icon--c {
+  position: absolute;
+  left: 0;
+  color: #FF79DAFF;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity ease-in-out 300ms, transform cubic-bezier(0.42, 0, 0.51, 1.97) 300ms;
+}
+.heart-button:hover > .heart-button__icon--bw {
+  opacity: 0;
+}
+.heart-button:hover > .heart-button__icon--c {
+  opacity: 1;
+  transform: scale(1);
 }
 
 .restaurants {
