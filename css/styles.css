@@ -371,8 +371,6 @@ body {
   background-color: white;
   cursor: pointer;
   overflow: hidden;
-  /*        opacity: 0;
-          transform: translateY(10.00rem);*/
 }
 .menu__element__description {
   padding: 0.87rem 0 0.75rem 0.69rem;
@@ -422,6 +420,81 @@ body {
 .menu__element:hover .menu__element__check__icon {
   transform: rotate(360deg);
   transition: transform 500ms;
+}
+
+@keyframes elt-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(-75%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.bloc-app:nth-child(1) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 0ms;
+}
+.bloc-app:nth-child(2) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 100ms;
+}
+.bloc-app:nth-child(3) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 200ms;
+}
+.bloc-app:nth-child(4) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 300ms;
+}
+.bloc-app:nth-child(5) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 400ms;
+}
+.bloc-app:nth-child(6) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 500ms;
+}
+.bloc-app:nth-child(7) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 600ms;
+}
+.bloc-app:nth-child(8) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 700ms;
+}
+.bloc-app:nth-child(9) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 800ms;
+}
+.bloc-app:nth-child(10) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 900ms;
+}
+.bloc-app:nth-child(11) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 1000ms;
+}
+.bloc-app:nth-child(12) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 1100ms;
+}
+.bloc-app:nth-child(13) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 1200ms;
+}
+.bloc-app:nth-child(14) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 1300ms;
+}
+.bloc-app:nth-child(15) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 1400ms;
+}
+.bloc-app:nth-child(16) {
+  animation: elt-appear 200ms both ease-out;
+  animation-delay: 1500ms;
 }
 
 .bottom_page {

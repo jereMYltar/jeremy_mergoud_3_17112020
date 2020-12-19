@@ -380,8 +380,6 @@ body {
         background-color: white;
         cursor: pointer;
         overflow: hidden;
-/*        opacity: 0;
-        transform: translateY(10.00rem);*/
 
         &__description {
             padding: 0.87rem 0 0.75rem 0.69rem;
@@ -438,6 +436,30 @@ body {
                 transform: rotate(360deg);
                 transition: transform 500ms;
             }
+        }
+    }
+}
+
+$anim-delay: 200ms;
+$iterations-nb: 16;
+
+@keyframes elt-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-75%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.bloc-app {
+    @for $i from 1 through $iterations-nb {
+        &:nth-child(#{$i}) {
+            animation: elt-appear $anim-delay both ease-out;
+            animation-delay: $anim-delay * ($i - 1) / 2;
         }
     }
 }
