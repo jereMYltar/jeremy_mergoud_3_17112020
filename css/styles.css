@@ -71,6 +71,122 @@ body {
   background-repeat: repeat;
 }
 
+@keyframes load {
+  0% {
+    opacity: 1;
+    z-index: 99;
+  }
+  80% {
+    opacity: 1;
+    z-index: 99;
+  }
+  99% {
+    opacity: 0;
+    z-index: 99;
+  }
+  100% {
+    opacity: 0;
+    z-index: -99;
+  }
+}
+@keyframes carousel {
+  0% {
+    transform: translateX(0) rotateY(0) translateZ(-8vw) scale(0.6);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(8vw) rotateY(-90deg) translateZ(-4vw) scale(0.8);
+    opacity: 0.2;
+  }
+  45% {
+    transform: translateX(0) rotateY(0) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(0) rotateY(0) translateZ(0) scale(1);
+    opacity: 1;
+  }
+  75% {
+    transform: translateX(-8vw) rotateY(90deg) translateZ(-4vw) scale(0.8);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateX(0) rotateY(0) translateZ(-8vw) scale(0.6);
+    opacity: 0;
+  }
+}
+@keyframes logo-animation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  25% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  99% {
+    transform: scale(1000);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+.loader {
+  position: absolute;
+  top: 0;
+  bottom: 0%;
+  left: 0;
+  right: 0%;
+  /*    height: 100%;
+      width: 100%;*/
+  /*    height: 100vh;
+      width: 100vw;*/
+  z-index: 10;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: load 4000ms both ease-out;
+}
+.loader__pic {
+  font-size: 10vw;
+  position: absolute;
+  perspective: 10vw;
+}
+.loader__pic--1 {
+  color: #e5e5e5;
+  animation: carousel 1000ms both linear;
+  animation-delay: 250ms;
+}
+.loader__pic--2 {
+  color: #99E2D0FF;
+  animation: carousel 1000ms both linear;
+  animation-delay: 750ms;
+}
+.loader__pic--3 {
+  color: #9356DCFF;
+  animation: carousel 1000ms both linear;
+  animation-delay: 1250ms;
+}
+.loader__pic--4 {
+  color: #FF79DAFF;
+  animation: carousel 1000ms both linear;
+  animation-delay: 1750ms;
+}
+.loader__logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 5vw;
+  color: white;
+  animation: logo-animation 1000ms linear both;
+  animation-delay: 2750ms;
+}
+
 .title {
   text-align: center;
   background-color: white;
