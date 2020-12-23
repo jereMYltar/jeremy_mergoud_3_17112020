@@ -1,0 +1,47 @@
+.loader {
+    position: fixed;
+    top: 0;
+    bottom: 0%;
+    left: 0;
+    right: 0%;
+    z-index: 10;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: load $loader-duration both ease-out;
+
+    &__pic {
+        font-size: $loader-w;
+        position: absolute;
+        perspective: $loader-w;
+
+        @for $i from 1 through 4 {
+            &--#{$i} {
+                @if $i==1 {
+                    color: $gray-lighter;
+                }
+                @else if $i==2 {
+                    color: $tertiary-color
+                }
+                @else if $i==3 {
+                    color: $primary-color;
+                }
+                @else {
+                    color: $secondary-color;
+                }
+
+                animation: carousel (4 / 16 * $loader-duration) both linear;
+                animation-delay: (2 / 16 * $loader-duration) * $i - (1 / 16 * $loader-duration);
+            }
+        }
+    }
+
+    &__logo {
+        font-family: 'Shrikhand', cursive;
+        font-size: 5vw;
+        color: white;
+        animation: logo-animation (4 / 16 * $loader-duration) linear both;
+        animation-delay: (11 / 16 * $loader-duration);
+    }
+}

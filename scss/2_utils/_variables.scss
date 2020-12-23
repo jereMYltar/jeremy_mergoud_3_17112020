@@ -23,3 +23,15 @@ $breakpoints: (
     l-screen: 700px,
     xl-screen: 900px
 );
+
+/*Variables des keyframes :*/
+/* > pour le loader : général ($loader-duration: durée totale du loader)*/
+$loader-duration: 3000ms;
+/* > pour le loader : caroussel ($w: largeur des images)*/
+$loader-w: 10vw;
+/* > pour les plats : apparition ($iterations-nb: nombre d'éléments à animer)*/
+$iterations-nb: 16;
+/* > pour les plats : apparition ($menu-duration: durée d'une transition)*/
+$menu-duration: 250ms;
+/* > pour les plats : apparition ($v-offset: décalage vertical)*/
+$v-offset: 25%

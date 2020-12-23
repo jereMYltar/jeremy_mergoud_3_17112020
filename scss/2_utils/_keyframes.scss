@@ -1,0 +1,96 @@
+/*Animation du loader : font gris*/
+@keyframes load {
+    0% {
+        opacity: 1;
+        z-index: 99
+    }
+
+    80% {
+        opacity: 1;
+        z-index: 99
+    }
+
+    99% {
+        opacity: 0;
+        z-index: 99;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -99;
+    }
+}
+
+/*Animation du loader : caroussel d'images*/
+@keyframes carousel {
+    0% {
+        transform: translateX(0) rotateY(0) translateZ(-0.8 * $loader-w) scale(0.6);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateX(0.8 * $loader-w) rotateY(-90deg) translateZ(-0.4 * $loader-w) scale(0.8);
+        opacity: 0.2;
+    }
+
+    45% {
+        transform: translateX(0) rotateY(0) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    55% {
+        transform: translateX(0) rotateY(0) translateZ(0) scale(1);
+        opacity: 1;
+    }
+
+    75% {
+        transform: translateX(-0.8 * $loader-w) rotateY(90deg) translateZ(-0.4 * $loader-w) scale(0.8);
+        opacity: 0.2;
+    }
+
+    100% {
+        transform: translateX(0) rotateY(0) translateZ(-0.8 * $loader-w) scale(0.6);
+        opacity: 0;
+    }
+}
+
+/*Animation du loader : logo*/
+@keyframes logo-animation {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    25% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    99% {
+        transform: scale(1000);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+/*Animation des menus : apparition progressive*/
+@keyframes menu-appear {
+    0% {
+        opacity: 0;
+        transform: translateY($v-offset);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,18 @@
+.title {
+    text-align: center;
+    background-color: white;
+    position: relative;
+
+    &__logo {
+        padding: 1.37rem 0 0.69rem 0;
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.87rem;
+    }
+
+    &__return {
+        position: absolute;
+        left: 1.44rem;
+        top: calc(1.37rem + 1.87rem / 2);
+        font-size: 1.00rem;
+    }
+}

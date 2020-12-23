@@ -4,6 +4,9 @@
 @import "./1_base/reset";
 @import "./2_utils/variables";
 @import "./2_utils/mixin";
+@import "./2_utils/keyframes";
+@import "./4_components/too-small";
+
 
 html {
     font-size: 20px;
@@ -22,180 +25,18 @@ html {
     margin: auto;
 }
 
-.too_small_no {
-    @include mediaquery (s) {
-        display: none;
-    }
-}
 
-.too_small_yes {
-    display: none;
-    @include mediaquery (s) {
-        display: block;
-    }
-}
 
 body {
     background-image: url('../icons/background3.svg');
     background-repeat: repeat;
 }
 
-@keyframes load {
-    0% {
-        opacity: 1;
-        z-index: 99
-        
-    }
+@import "./3_layout/loader";
 
-    80% {
-        opacity: 1;
-        z-index: 99
-    }
+@import "./3_layout/header";
 
-    99% {
-        opacity: 0;
-        z-index:99;
-    }
-
-    100% {
-        opacity: 0;
-        z-index:-99;
-    }
-}
-
-
-$w: 10vw;
-$loader_duration: 4000ms;
-
-@keyframes carousel {
-    0% {
-        transform: translateX(0) rotateY(0) translateZ(-0.8 * $w) scale(0.6);
-        opacity: 0;
-    }
-
-    25% {
-        transform: translateX(0.8 * $w) rotateY(-90deg) translateZ(-0.4 * $w) scale(0.8);
-        opacity: 0.2;
-    }
-
-    45% {
-        transform: translateX(0) rotateY(0) translateZ(0) scale(1);
-        opacity: 1;
-    }
-
-    55% {
-        transform: translateX(0) rotateY(0) translateZ(0) scale(1);
-        opacity: 1;
-    }
-
-    75% {
-        transform: translateX(-0.8 * $w) rotateY(90deg) translateZ(-0.4 * $w) scale(0.8);
-        opacity: 0.2;
-    }
-
-    100% {
-        transform: translateX(0) rotateY(0) translateZ(-0.8 * $w) scale(0.6);
-        opacity: 0;
-    }
-}
-
-@keyframes logo-animation {
-    0% {
-        transform: scale(0);
-        opacity: 0;
-    }
-
-    25% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-   50% {
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    99% {
-        transform: scale(1000);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(0);
-        opacity: 0;
-    }
-}
-
-.loader {
-    position: fixed;
-    top: 0;
-    bottom: 0%;
-    left: 0;
-    right: 0%;
-/*    height: 100%;
-    width: 100%;*/
-/*    height: 100vh;
-    width: 100vw;*/
-    z-index: 10;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: load $loader_duration both ease-out;
-
-    &__pic {
-        font-size: $w;
-        position: absolute;
-        perspective: $w;
-
-        @for $i from 1 through 4 {
-            &--#{$i} {
-                @if $i==1 {
-                    color: $gray-lighter;
-                }
-                @else if $i==2 {
-                    color: $tertiary-color
-                }
-                @else if $i==3 {
-                    color: $primary-color;
-                }
-                @else {
-                    color: $secondary-color;
-                }
-
-                animation: carousel (4 / 16 * $loader_duration) both linear;
-                animation-delay: (2 / 16 * $loader_duration) * $i - (1 / 16 * $loader_duration);
-            }
-        }
-    }
-
-    &__logo {
-        font-family: 'Shrikhand', cursive;
-        font-size: 5vw;
-        color: white;
-        animation: logo-animation (4 / 16 * $loader_duration) linear both;
-        animation-delay: (11 / 16 * $loader_duration);
-    }
-}
-
-.title {
-    text-align: center;
-    background-color: white;
-    position: relative;
-
-    &__logo {
-        padding: 1.37rem 0 0.69rem 0;
-        font-family: 'Shrikhand', cursive;
-        font-size: 1.87rem;
-    }
-
-    &__return {
-        position: absolute;
-        left: 1.44rem;
-        top: calc(1.37rem + 1.87rem / 2);
-        font-size: 1.00rem;
-    }
-}
+@import "./3_layout/footer";
 
 .localisation {
     height: 3.12rem;
@@ -365,10 +206,15 @@ $loader_duration: 4000ms;
         &--c {
             position: absolute;
             left: 0;
-            color: $secondary-color;
             opacity: 0;
             transform: scale(0);
             transition: opacity ease-in-out 300ms, transform cubic-bezier(0.42, 0, 0.51, 1.97) 300ms;
+
+            &::before {
+                background: linear-gradient(150deg, #FF97DA, #9356DC);
+                -webkit-text-fill-color: transparent;
+                -webkit-background-clip: text;
+            }
         }
     }
 
@@ -576,144 +422,12 @@ $loader_duration: 4000ms;
     }
 }
 
-$anim-delay: 200ms;
-$iterations-nb: 16;
-
-@keyframes elt-appear {
-    0% {
-        opacity: 0;
-        transform: translateY(-75%);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .bloc-app {
     @for $i from 1 through $iterations-nb {
         &:nth-child(#{$i}) {
-            animation: elt-appear $anim-delay both ease-out;
-            animation-delay: $anim-delay * ($i - 1) / 2;
+            animation: menu-appear $menu-duration both ease-out;
+            animation-delay: $menu-duration * ($i - 1) / 2;
         }
     }
 }
 
-
-.bottom_page {
-    max-width: map-get($breakpoints, xl-screen);
-    margin: auto;
-    background-color: $gray-darker;
-}
-
-.foot {
-    max-width: calc(map-get($breakpoints, xl-screen) - 2.50rem);
-    padding: 1.56rem 1.25rem 2.21rem;
-
-    &__title {
-        margin-bottom: 1.58rem;
-        font-family: 'Shrikhand', cursive;
-        font-size: 1.10rem;
-        color: white;
-        text-align: center;
-
-        @include mediaquery (l) {
-            text-align: start;
-        }
-    }
-
-    &__bloc {
-        display: flex;
-        justify-content: space-evenly;
-
-        @include mediaquery (l) {
-            display: block;
-        }
-    }
-
-    &__subbloc {
-        min-width: 45%;
-
-        @include mediaquery (l) {
-            min-width: unset;
-        }
-
-        &__link {
-            position: relative;
-            margin-bottom: 0.56rem;
-            display: flex;
-            justify-content: center;
-
-            @include mediaquery (l) {
-                justify-content: flex-start;
-            }
-
-
-            &:hover > .foot__subbloc__ {
-                &icon {
-                    color: $tertiary-color;
-                }
-
-                &text {
-                    color: $tertiary-color;
-                }
-
-                &text--light {
-                    color: $tertiary-color;
-                }
-            }
-        }
-
-        &__icon {
-            position: relative;
-            font-size: 0.81rem;
-            color: white;
-
-            @include mediaquery (l) {
-                position: absolute;
-            }
-        }
-
-        &__text {
-            margin-left: 0.5rem;
-            font-family: 'Roboto_Medium', sans-serif;
-            font-size: 1.00rem;
-            color: white;
-
-            @include mediaquery (l) {
-                margin-left: 1.44rem;
-            }
-
-
-            &--light {
-                font-family: 'Roboto_Light', sans-serif;
-                font-size: 1.00rem;
-                color: white;
-            }
-        }
-    }
-}
-
-.warning {
-    margin: 0.3rem;
-
-    &__picture {
-        margin: auto;
-        width: 100%;
-    }
-
-    &__text {
-        padding: 0.25rem;
-        text-align: center;
-        font-size: 1.5rem;
-
-        @include mediaquery (xs) {
-            font-size: 1.00rem;
-        }
-
-        @include mediaquery (xxs) {
-            font-size: 0.50rem;
-        }
-    }
-}
