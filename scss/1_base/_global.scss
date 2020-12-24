@@ -1,0 +1,23 @@
+html {
+    font-size: 20px;
+
+    @include mediaquery (xl) {
+        font-size: 18px;
+    }
+
+    @include mediaquery (l) {
+        font-size: 16px;
+    }
+}
+
+.layout {
+    max-width: map-get($breakpoints, xl-screen);
+    margin: auto;
+}
+
+
+
+body {
+    background-image: url('../icons/background4.svg');
+    background-repeat: repeat;
+}

@@ -4,7 +4,6 @@
 <head>
     <meta charset="utf-8" />
     <title>ohmyfood x À la française</title>
-    <link href="../scss/7_vendors/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     <link rel="shortcut icon" type="image/x-icon" href="../icons/icon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
@@ -35,9 +34,9 @@
             </div>
             <div class="canteen__tab">
                 <h2 class="canteen__tab__title">À la française</h2>
-                <button class="heart-button">
-                    <i class="far fa-heart heart-button__icon--bw"></i>
-                    <i class="fas fa-heart heart-button__icon--c"></i>
+                <button class="heart-position--menu heart">
+                    <i class="far fa-heart heart--bw"></i>
+                    <i class="fas fa-heart heart--c"></i>
                 </button>
             </div>
         </section>
@@ -160,6 +159,12 @@
                 </div>
             </div>
         </section>
+
+        <section class="order-button">
+            <button class="main-button main-button--menu" type="button">
+                <span class="main-button__text">Commander</span>
+            </button>
+        </section>
     </main>
 
 
@@ -182,7 +187,7 @@
                     <a href="#" class="foot__subbloc__link">
                         <div class="foot__subbloc__text--light">Mentions légales</div>
                     </a>
-                    <a href="mailto: contact@ohmyfood.fr" class="foot__subbloc__link">
+                    <a href="mailto:contact@ohmyfood.fr" class="foot__subbloc__link">
                         <div class="foot__subbloc__text--light">Contact</div>
                     </a>
                 </div>

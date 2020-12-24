@@ -1,0 +1,209 @@
+.localisation {
+    height: 3.12rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $gray_lighter;
+    box-shadow: inset 0 0.25rem 0.25rem $gray-light;
+
+    &__icon {
+        font-size: 1.00rem;
+        margin-right: 1.12rem;
+        color: $gray-darker;
+    }
+
+    &__geozone {
+        font-family: 'Roboto_Medium', sans-serif;
+        font-size: 1.00rem;
+        color: $gray-darker;
+    }
+}
+
+.description {
+    padding: 2.62rem 0 3.56rem;
+    text-align: center;
+    background-color: $gray_xtralight;
+
+    &__title {
+        margin: 0 4.06rem 0.87rem;
+        font-size: 1.50rem;
+
+        @include mediaquery (m) {
+            margin: 0 2rem 1.25rem;
+        }
+    }
+
+    &__subtitle {
+        margin: 0 2.44rem 1.87rem;
+        font-family: 'Roboto_Light', sans-serif;
+        font-size: 1.12rem;
+    }
+}
+
+.working {
+    padding: 3.19rem 1.25rem 2.75rem;
+    background-color: white;
+
+    &__title {
+        margin-bottom: 1.87rem;
+        font-size: 1.50rem;
+    }
+
+    &__button {
+        height: 4.62rem;
+        width: calc(70% - 0.75rem);
+        margin: 0 auto 1.5rem;
+        border: none;
+        border-radius: 1.00rem;
+        background-color: $gray_xtralight;
+        position: relative;
+        box-shadow: 0 0.3rem 0.3rem $gray-light;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        @include mediaquery (l) {
+            width: calc(100% - 0.75rem);
+            margin: 0 0 1.5rem 0.75rem;
+        }
+
+        &__number {
+            height: 1.5rem;
+            width: 1.5rem;
+            border-radius: 0.75rem;
+            position: absolute;
+            left: -0.75rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.75rem;
+            color: white;
+            background-color: $primary-color;
+        }
+
+        &__icon {
+            font-size: 1.25rem;
+            position: absolute;
+            left: 2.06rem;
+            color: $gray-dark;
+        }
+
+        &__text {
+            margin-left: 4.56rem;
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 1.00rem;
+        }
+
+        &:hover {
+            background-color: $primary-color-light;
+
+            & > .working__button__icon {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.heart-position {
+    &--index {
+        font-size: 1.50rem;
+        position: absolute;
+        top: calc(50% - 0.75rem + 1.50rem);
+        right: 3.00rem;
+    }
+}
+
+.restaurants {
+    padding: 3.56rem 1.25rem 2.88rem;
+    background-color: $gray-xtralight;
+
+    &__title {
+        margin-bottom: 1.50rem;
+        font-size: 1.50rem;
+    }
+
+    &__layout {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+.tile {
+    margin-bottom: 1.12rem;
+    min-width: 48.5%;
+    border-radius: 0.75rem;
+    background-color: white;
+    box-shadow: 0.1rem 0.1rem 0.3rem $gray-light;
+
+    @include mediaquery (l) {
+        width: 100%;
+    }
+
+
+    &:nth-of-type(1) > .tile__photo {
+        background-image: url('../images/restaurants/compressed_jay-wennington-N_Y88TWmGwA-unsplash.jpg');
+    }
+
+    &:nth-of-type(2) > .tile__photo {
+        background-image: url('../images/restaurants/compressed_stil-u2Lp8tXIcjw-unsplash.jpg');
+    }
+
+    &:nth-of-type(3) > .tile__photo {
+        background-image: url('../images/restaurants/compressed_toa-heftiba-DQKerTsQwi0-unsplash.jpg');
+    }
+
+    &:nth-of-type(4) > .tile__photo {
+        background-image: url('../images/restaurants/compressed_louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg');
+    }
+
+    &__photo {
+        height: 10.87rem;
+        position: relative;
+        border-radius: 0.75rem 0.75rem 0 0;
+        background: center / cover;
+
+        &__new {
+            height: 1.81rem;
+            width: 5.02rem;
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 0.87rem;
+            position: absolute;
+            top: 0.75rem;
+            right: 0.75rem;
+            border-radius: 0.12rem;
+            background-color: $tertiary-color;
+            color: $tertiary-color-dark;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__description {
+        padding: 1.12rem 0.87rem 1.00rem;
+        position: relative;
+
+        &__name {
+            margin-bottom: 0.31rem;
+            font-size: 1.12rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        &__place {
+            font-family: 'Roboto_Light', sans-serif;
+            font-size: 1.06rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &:hover {
+        opacity: 0.6;
+        box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
+    }
+}
+

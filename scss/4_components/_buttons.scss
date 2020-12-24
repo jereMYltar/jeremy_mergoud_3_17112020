@@ -1,0 +1,63 @@
+/*Boutons "J'aime" et animation*/
+.heart {
+    cursor: pointer;
+    position: relative;
+
+    &--bw {
+        font-size: 1.50rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 1;
+        transition: opacity ease-in-out 300ms;
+        cursor: pointer;
+    }
+
+    &--c {
+        font-size: 1.50rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        opacity: 0;
+        transform: scale(0);
+        transition: opacity ease-in-out 300ms, transform cubic-bezier(0.42, 0, 0.51, 1.97) 300ms;
+
+        &::before {
+            background: linear-gradient(30deg, #FF97DA, #9356DC);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+
+    &:hover {
+        & > .heart--bw {
+            opacity: 0;
+        }
+
+        & > .heart--c {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+}
+
+/*Boutons principaux et animation*/
+.main-button {
+    height: 3.12rem;
+    padding: 0 1.37rem;
+    border: none;
+    border-radius: 1.56rem;
+    background: linear-gradient(to bottom right, $secondary-color, $primary-color);
+    box-shadow: 0.1rem 0.1rem 0.3rem $gray-light;
+    cursor: pointer;
+
+    &__text {
+        font-size: 1.00rem;
+        color: white;
+    }
+
+    &:hover {
+        opacity: 0.9;
+        box-shadow: 0.2rem 0.2rem 0.5rem $gray-dark;
+    }
+}

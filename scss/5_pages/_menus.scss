@@ -1,0 +1,138 @@
+.canteen {
+    position: relative;
+
+    &__img {
+        height: 18.50rem;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    &__tab {
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 2.24rem);
+        background-color: $gray-xtralight;
+        border-radius: 2.37rem 2.37rem 0 0;
+        padding: 2.44rem 1.12rem 0.69rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+
+        &__title {
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.75rem;
+        }
+    }
+}
+
+.heart-position {
+    &--menu {
+        margin-right: 2.37rem;
+    }
+}
+
+.menu {
+    padding: 0 0.87rem 2.25rem;
+    background-color: $gray-xtralight;
+
+    &__title {
+        font-family: 'Roboto_Light', sans-serif;
+        font-size: 1.00rem;
+        margin: 0 0 0.31rem 0.44rem;
+        padding-top: 1.75rem;
+    }
+
+    &__line {
+        height: 0.19rem;
+        width: 2.50rem;
+        background-color: $tertiary-color;
+        margin: 0 0 0.87rem 0.44rem;
+    }
+
+    &__element {
+        position: relative;
+        display: flex;
+        margin-bottom: 0.87rem;
+        border-radius: 0.75rem;
+        background-color: white;
+        cursor: pointer;
+        overflow: hidden;
+
+        &__description {
+            padding: 0.87rem 0 0.75rem 0.69rem;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            transition: width 500ms;
+        }
+
+        &__text {
+            max-width: calc(100% - 4.50rem);
+        }
+
+        &__price {
+            padding: 0 1.44rem;
+            display: flex;
+            align-items: flex-end;
+            font-family: 'Roboto_Medium', sans-serif;
+            font-size: 0.94rem;
+        }
+
+        &__check {
+            position: absolute;
+            right: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 3.69rem;
+            background-color: $tertiary-color;
+            border-radius: 0 0.75rem 0.75rem 0;
+            transform: translateX(100%);
+            transition: transform 500ms;
+
+            &__icon {
+                color: white;
+                font-size: 1.25rem;
+                transition: none;
+            }
+        }
+
+        &:hover {
+            & > .menu__element__description {
+                width: calc(100% - 3.69rem);
+            }
+
+            & > .menu__element__check {
+                transform: translateX(0);
+            }
+
+            & .menu__element__check__icon {
+                transform: rotate(360deg);
+                transition: transform 500ms;
+            }
+        }
+    }
+}
+
+.bloc-app {
+    @for $i from 1 through $iterations-nb {
+        &:nth-child(#{$i}) {
+            animation: menu-appear $menu-duration both ease-out;
+            animation-delay: $menu-duration * ($i - 1) / 2;
+        }
+    }
+}
+
+.order-button {
+    background-color: $gray-xtralight;
+    padding-bottom: 5.19rem;
+    display: flex;
+    justify-content: center;
+}
+
+.main-button--menu {
+    padding-left: 3.06rem;
+    padding-right: 3.06rem;
+}

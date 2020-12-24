@@ -12,7 +12,7 @@ $gray-lighter: color.adjust($gray-darker, $lightness: 75%);
 $gray-xtralight: color.adjust($gray-darker, $lightness: 80%);
 
 /*FontAwesome*/
-$fa-font-path: "../scss/7_vendors/webfonts";
+$fa-font-path: "../scss/7_vendors/fontawesome/webfonts";
 
 /*Media queries*/
 $breakpoints: (
