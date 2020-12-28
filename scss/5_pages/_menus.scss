@@ -33,7 +33,7 @@
 }
 
 .menu {
-    padding: 0 0.87rem 2.25rem;
+    padding: 0 0.87rem 5.19rem;
     background-color: $gray-xtralight;
 
     &__title {
@@ -112,6 +112,18 @@
                 transform: rotate(360deg);
                 transition: transform 500ms;
             }
+
+            & .tile__description__name {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            & .tile__description__place {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
     }
 }
@@ -127,7 +139,7 @@
 
 .order-button {
     background-color: $gray-xtralight;
-    padding-bottom: 5.19rem;
+    padding-top: 2.25rem;
     display: flex;
     justify-content: center;
 }
